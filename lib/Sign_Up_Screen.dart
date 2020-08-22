@@ -1,24 +1,14 @@
 import 'package:flutter/material.dart';
-
-class SignUp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-            title: Text('Sign Up')
-        )
-    );
-  }
-}
+import 'Dashboard_screen.dart';
 
 // ignore: camel_case_types
-class Sign extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
   @override
   _SignState createState() => _SignState();
 }
 
 // ignore: camel_case_types
-class _SignState extends State<Sign> {
+class _SignState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +34,17 @@ class _SignState extends State<Sign> {
                   hintText: "Type Password Again"
             ),
             ),
+            SizedBox(
+              height: 20.0,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DashboardScreen()),
+                );
+              },
+            )
           ], //children
         ),
       ),

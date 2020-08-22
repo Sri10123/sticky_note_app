@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Login.dart';
-import 'SignUp.dart';
+import 'Login_Screen.dart';
+import 'Sign_Up_Screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SignUp())
+                          MaterialPageRoute(builder: (context) => SignUpScreen())
                       );
                     },
                     textColor: Colors.blueGrey,
@@ -88,7 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     ),
-
                   ], //children
             ),
         ),
