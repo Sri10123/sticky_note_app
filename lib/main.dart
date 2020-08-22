@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
+      home: MyHomePage(title: 'Sticky Note App',),
     );
   }
 }
@@ -34,57 +34,64 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-
         title: Text(widget.title),
       ),
-      body: Center(
-          child: Column(
-              children: [
-                RaisedButton(
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/stickynotebackground.png",),
+            fit: BoxFit.cover
+          ),
+        ),
+        child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginScreen()),
+                        );
+                      },
+                      textColor: Colors.blueGrey,
+                      padding: EdgeInsets.fromLTRB(10,10,10,10),
+                      color: fontcolor,
+                      highlightColor: buttoncolor,
+                      child:Text(
+                          'Login',
+                        style: TextStyle(
+                          fontSize:30.0,
+                          fontWeight: FontWeight.w200,
+                        ),
+                      ),
+                  ),
+                  SizedBox(height: 20.0,),
+                  RaisedButton(
                     onPressed: () {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Login()),
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUp())
                       );
                     },
                     textColor: Colors.blueGrey,
-                    padding: EdgeInsets.fromLTRB(10,10,10,10),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                     color: fontcolor,
                     highlightColor: buttoncolor,
-                    child:Text(
-                        'Login',
+                    child: Text(
+                        'Sign Up',
                       style: TextStyle(
-                        fontSize:30.0,
+                        fontSize: 30.0,
                         fontWeight: FontWeight.w200,
                       ),
                     ),
-                ),
-                RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUp())
-                    );
-                  },
-                  textColor: Colors.blueGrey,
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                  color: fontcolor,
-                  highlightColor: buttoncolor,
-                  child: Text(
-                      'Sign Up',
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w200,
                     ),
-                  ),
-                  ),
-                Container(
-                    child: Image.asset("assets/stickynotebackground.png", fit: BoxFit.cover),
-                    height:200.0,
-                    width: 150.0,
-                ),
-                ], //children
-          ),
+
+                  ], //children
+            ),
+        ),
       ),
           );
   }

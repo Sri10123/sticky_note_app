@@ -1,22 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login Page'),
-      ),
-    );
-  }
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class Account extends StatefulWidget {
-  @override
-  _AccountState createState() => _AccountState();
-}
-
-class _AccountState extends State<Account> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
