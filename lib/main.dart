@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(title: 'Sticky Note App',),
+
     );
   }
 }
@@ -33,9 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -57,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       textColor: Colors.blueGrey,
-                      padding: EdgeInsets.fromLTRB(10,10,10,10),
+                      padding: EdgeInsets.fromLTRB(25,10,25,10),
                       color: fontcolor,
                       highlightColor: buttoncolor,
                       child:Text(
