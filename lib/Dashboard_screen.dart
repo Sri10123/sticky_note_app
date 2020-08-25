@@ -29,7 +29,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
           child: Center(
             child: BottomNavigationBar(
-              items: <BottomNavigationBarItem>[
+              currentIndex: 0,
+              items:[
                 BottomNavigationBarItem(
                   icon: Icon(Icons.note),
                   title: Text("Sticky Notes")
@@ -43,8 +44,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     title: Text("Messages")
                 ),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.account_circle),
-                    title: Text("Profile")
+                  icon: Icon(Icons.account_circle),
+                  title: Text("Profile")
                 ),
               ],
             ),
