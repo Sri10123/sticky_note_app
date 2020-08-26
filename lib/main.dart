@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Login_Screen.dart';
 import 'Sign_Up_Screen.dart';
@@ -43,51 +44,90 @@ class _MyHomePageState extends State<MyHomePage> {
             fit: BoxFit.cover
           ),
         ),
-        child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RaisedButton(
+        child: SingleChildScrollView(
+          child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(height:100.0),
+                    Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: Text(
+                          "Welcome to",
+                              style:TextStyle(
+                                color: fontcolor,
+                                fontSize: 45.0,
+                                fontWeight: FontWeight.w400,
+                      ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: Text(
+                          "The",
+                                style:TextStyle(
+                                  color: fontcolor,
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.w400,
+                       ),
+                       ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: Text(
+                        "Sticky Note App",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 45.0,
+                                    fontWeight: FontWeight.bold,
+                                    decoration: TextDecoration.underline,
+                          ),
+                          ),
+                    ),
+                    SizedBox(height:100.0),
+                    RaisedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginScreen()),
+                          );
+                        },
+                        textColor: Colors.blueGrey,
+                        padding: EdgeInsets.fromLTRB(20,5,20,5),
+                        color: fontcolor,
+                        highlightColor: buttoncolor,
+                        child:Text(
+                            'Login',
+                          style: TextStyle(
+                            fontSize:35.0,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                    ),
+                    SizedBox(height: 20.0,),
+                    RaisedButton(
                       onPressed: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => LoginScreen()),
+                            context,
+                            MaterialPageRoute(builder: (context) => SignUpScreen())
                         );
                       },
                       textColor: Colors.blueGrey,
-                      padding: EdgeInsets.fromLTRB(25,10,25,10),
+                      padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                       color: fontcolor,
                       highlightColor: buttoncolor,
-                      child:Text(
-                          'Login',
+                      child: Text(
+                          'Sign Up',
                         style: TextStyle(
-                          fontSize:30.0,
+                          fontSize: 30.0,
                           fontWeight: FontWeight.w200,
                         ),
                       ),
-                  ),
-                  SizedBox(height: 20.0,),
-                  RaisedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignUpScreen())
-                      );
-                    },
-                    textColor: Colors.blueGrey,
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color: fontcolor,
-                    highlightColor: buttoncolor,
-                    child: Text(
-                        'Sign Up',
-                      style: TextStyle(
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.w200,
                       ),
-                    ),
-                    ),
-                  ], //children
-            ),
+                    SizedBox(height:400.0,),
+                    ], //children
+              ),
+          ),
         ),
       ),
           );

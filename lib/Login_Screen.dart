@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show Border, BoxDecoration, BuildContext, Center, Colors, Column, Container, EdgeInsets, FontWeight, InputBorder, InputDecoration, MainAxisAlignment, MaterialPageRoute, Navigator, Padding, RaisedButton, Scaffold, SizedBox, State, StatefulWidget, Text, TextField, TextStyle, Widget;
+import 'package:flutter/material.dart';
 import 'Dashboard_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -10,74 +10,105 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.blueGrey,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0,0,300,0),
-                child: RaisedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  textColor: Colors.black,
-                  padding: EdgeInsets.fromLTRB(0,0,0,0),
-                  color: fontcolor,
-                  highlightColor: buttoncolor,
-                  child: Text(
-                    "<- Back",
-                    style: TextStyle(
-                      fontSize:20.0,
-                      fontWeight: FontWeight.w300,
+      backgroundColor: Colors.amberAccent,
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 15.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0,0,300,0),
+                  child: RaisedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    textColor: Colors.black,
+                    padding: EdgeInsets.fromLTRB(0,0,0,0),
+                    color: fontcolor,
+                    highlightColor: buttoncolor,
+                    child: Text(
+                      "<- Back",
+                      style: TextStyle(
+                        fontSize:20.0,
+                        fontWeight: FontWeight.w300,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 250.0,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.black),
+                SizedBox(
+                  height: 100.0,
                 ),
-                child: TextField(
-                  decoration: InputDecoration(
-                  border: InputBorder.none,
-                      hintText: "Username"
+                Text(
+                  "Login Page",
+                      style: TextStyle(
+                        fontSize: 50.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
                 ),
                 ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.black),
+                SizedBox(
+                  height:85.0,
                 ),
-                child: TextField(
-                  decoration: InputDecoration(
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5,0,5,0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.black),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Password",
+                          hintText: "Username"
+                    ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5,0,5,0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.black),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Password",
+                    ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 250.0,
+                ),
+                RaisedButton(
+                  onPressed:() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DashboardScreen())
+                    );
+                  },
+                  textColor: Colors.black,
+                  padding: EdgeInsets.fromLTRB(15,7,15,7),
+                  color: fontcolor,
+                  highlightColor: buttoncolor,
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                      fontSize:30.0,
+                      fontWeight: FontWeight.w300,
                 ),
                 ),
-              ),
-              SizedBox(
-                height: 250.0,
-              ),
-              RaisedButton(
-                onPressed:() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DashboardScreen())
-                  );
-                }
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
         ),
-      ),
     );
   }
 }

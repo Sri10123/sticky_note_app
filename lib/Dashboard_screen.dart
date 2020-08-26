@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'Classroom_screen.dart';
+import 'package:sticky_note_app/Classroom_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -18,40 +21,161 @@ class _DashboardScreenState extends State<DashboardScreen> {
               fit: BoxFit.cover
           ),
         ),
-        child: Container(
-          height: 100.0,
-          width: 100.0,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("image-removebg-preview (2).png",),
-              fit: BoxFit.cover
-            ),
-          ),
-          child: Center(
-            child: BottomNavigationBar(
-              currentIndex: 0,
-              items:[
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.note),
-                  title: Text("Sticky Notes")
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ClassroomScreen()),
+                    );
+                },
                 ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.assignment_ind),
-                    title: Text("Classrooms")
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: 120.0,
+                      width: 120.0,
+                      child: Image.asset("assets/image-removebg-preview (2).png",)
+                        ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
                 ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.chat),
-                    title: Text("Messages")
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
                 ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.account_circle),
-                  title: Text("Profile")
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
         ),
-      ),
     );
   }
 }

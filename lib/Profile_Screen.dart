@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -9,7 +7,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
-  Future<Widget> build(BuildContext context) async {
+  Widget build(BuildContext context) {
     return Container();
   }
 }
