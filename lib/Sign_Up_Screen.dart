@@ -120,7 +120,7 @@ class _SignState extends State<SignUpScreen> {
                   "Sign Up",
                   style: TextStyle(
                     fontSize:30.0,
-                    fontWeight: FontWeight.w300,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
