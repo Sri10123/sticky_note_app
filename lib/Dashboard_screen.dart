@@ -58,37 +58,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Container(
                         height: 120.0,
                         width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                     Container(
                         height: 120.0,
                         width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                     Container(
                         height: 120.0,
                         width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
-                    ),
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                        height: 120.0,
-                        width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
-                    ),
-                    Container(
-                        height: 120.0,
-                        width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
-                    ),
-                    Container(
-                        height: 120.0,
-                        width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                   ],
                 ),
@@ -118,17 +98,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Container(
                         height: 120.0,
                         width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                     Container(
                         height: 120.0,
                         width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                     Container(
                         height: 120.0,
                         width: 120.0,
-                        child: Image.asset("assets/image-removebg-preview (2).png",)
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                   ],
                 ),
@@ -149,6 +129,26 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         height: 120.0,
                         width: 120.0,
                         child: Image.asset("assets/image-removebg-preview (2).png",)
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/stickynote.webp",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/stickynote.webp",)
+                    ),
+                    Container(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset("assets/stickynote.webp",)
                     ),
                   ],
                 ),
