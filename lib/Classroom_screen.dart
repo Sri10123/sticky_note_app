@@ -11,7 +11,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: Colors.amberAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +32,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
                 ),
               ),
             ),
-            SizedBox(height:10.0,),
+            SizedBox(height:32.0,),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -57,7 +57,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 600,),
+            SizedBox(height: 565,),
           ],
         ),
       ),
