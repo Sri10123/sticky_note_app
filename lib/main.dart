@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sticky_note_app/Profile_Screen.dart';
+import 'package:sticky_note_app/root_screen.dart';
 import 'Login_Screen.dart';
 import 'Sign_Up_Screen.dart';
 
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     // home: MyHomePage(title: 'Sticky Note App',),
-      home: ProfileScreen(),
+      home: MyHomePage(title: 'Sticky Note App',),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -62,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       ),
                     ),
+                    /*
                     Padding(
                       padding: const EdgeInsets.all(0),
                       child: Text(
@@ -72,11 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fontWeight: FontWeight.w400,
                        ),
                        ),
-                    ),
+                    ),*/
                     Padding(
                       padding: const EdgeInsets.all(0),
                       child: Text(
-                        "Sticky Note App",
+                        "El Notes",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 45.0,

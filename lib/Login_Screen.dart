@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sticky_note_app/root_screen.dart';
 import 'Dashboard_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -91,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed:() {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DashboardScreen())
+                      MaterialPageRoute(builder: (context) => RootScreen())
                     );
                   },
                   textColor: Colors.black,

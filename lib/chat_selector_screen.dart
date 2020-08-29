@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'Calculus_Bulletin_Board_Screen.dart';
-import 'JoinClassroom_Screen.dart';
+import 'package:sticky_note_app/chat_screen.dart';
 
-class ClassroomScreen extends StatefulWidget {
+import 'Calculus_Bulletin_Board_Screen.dart';
+
+class ChatSelectorScreen extends StatefulWidget {
   @override
-  _ClassroomScreenState createState() => _ClassroomScreenState();
+  _ChatSelectorScreenState createState() => _ChatSelectorScreenState();
 }
 
-class _ClassroomScreenState extends State<ClassroomScreen> {
+class _ChatSelectorScreenState extends State<ChatSelectorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,34 +19,22 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 20.0,),
+            Text('Chats', style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold
+            ),),
+            SizedBox(height:25.0,),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => JoinClassroomScreen())
-                );
-              },
-              child: Text(
-                "Join a classroom",
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20.0,
-                  color:Colors.black,
-                ),
-              ),
-            ),
-            SizedBox(height:32.0,),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CalculusScreen()),
+                  MaterialPageRoute(builder: (context) => ChatScreen()),
                 );
               },
               child: Container(
                 padding: EdgeInsets.fromLTRB(100, 2, 20, 2),
                 child:Text(
-                  "Calculus",
+                  "Dr. Jeff",
                   style: TextStyle(
                     fontSize: 50.0,
                     fontWeight: FontWeight.w300,
@@ -63,7 +52,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
             Container(
               padding: EdgeInsets.fromLTRB(100, 2, 20, 2),
               child:Text(
-                "History",
+                'Ms. Jones',
                 style: TextStyle(
                   fontSize: 50.0,
                   fontWeight: FontWeight.w300,
@@ -80,7 +69,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
             Container(
               padding: EdgeInsets.fromLTRB(100, 2, 20, 2),
               child:Text(
-                "English",
+                "Yolanda",
                 style: TextStyle(
                   fontSize: 50.0,
                   fontWeight: FontWeight.w300,
@@ -100,4 +89,3 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
     );
   }
 }
-

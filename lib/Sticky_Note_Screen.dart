@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class StickyNoteScreen extends StatefulWidget {
   @override
@@ -22,6 +23,7 @@ class _StickyNoteScreenState extends State<StickyNoteScreen> {
                 child: Padding(
                     padding: const EdgeInsets.fromLTRB(2,10,0,0),
                     child: TextField(
+
                       style: TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.w400,
@@ -45,6 +47,8 @@ class _StickyNoteScreenState extends State<StickyNoteScreen> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(5,5,0,0),
                   child: TextField(
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
                     style: TextStyle(
                       fontSize:20,
                       fontWeight: FontWeight.w400,
