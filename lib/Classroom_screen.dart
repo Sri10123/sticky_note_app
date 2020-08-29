@@ -32,7 +32,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
                 ),
               ),
             ),
-            SizedBox(height:10.0,),
+            SizedBox(height:32.0,),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -57,7 +57,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 600,),
+            SizedBox(height: 565,),
           ],
         ),
       ),

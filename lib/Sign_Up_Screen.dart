@@ -78,6 +78,7 @@ class _SignState extends State<SignUpScreen> {
                   border: Border.all(width:1,color: Colors.black)
                 ),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Password"
@@ -95,6 +96,7 @@ class _SignState extends State<SignUpScreen> {
                   border: Border.all(width:1, color: Colors.black)
                 ),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: "Type Password Again"

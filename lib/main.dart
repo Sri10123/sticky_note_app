@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(
                         "Sticky Note App",
                                   style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 45.0,
                                     fontWeight: FontWeight.bold,
                                     decoration: TextDecoration.underline,
