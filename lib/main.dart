@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sticky_note_app/Profile_Screen.dart';
 import 'Login_Screen.dart';
 import 'Sign_Up_Screen.dart';
 
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(title: 'Sticky Note App',),
-
+     // home: MyHomePage(title: 'Sticky Note App',),
+      home: ProfileScreen(),
     );
   }
 }
